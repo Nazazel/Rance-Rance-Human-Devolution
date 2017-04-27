@@ -1,0 +1,64 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+public class Menu : MonoBehaviour
+{
+    public bool started = true;
+    public Sprite[] backgrounds;
+
+    // Use this for initialization
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (started)
+        {
+            StartCoroutine("waitThreeSeconds");
+        }
+    }
+
+    IEnumerator waitThreeSeconds()
+    {
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
+        yield return new WaitForSeconds(1F);
+        GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+    }
+}
