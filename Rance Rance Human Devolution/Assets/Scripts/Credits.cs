@@ -28,6 +28,7 @@ public class Credits : MonoBehaviour
     IEnumerator waitThreeSeconds()
     {
         yield return new WaitForSeconds(3.0f);
+		GameObject.Find ("Audio Source").GetComponent<AudioSource> ().Play ();
         theText.text = "Project Leads:\n\nNazely  Hartoonian\n\nUlises Perez";
         yield return new WaitForSeconds(3.0f);
         theText.text = "Artist:\n\nVictoria Barinova";

@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
-    public bool started = true;
+    public bool started;
     public Sprite[] backgrounds;
 
     // Use this for initialization
     void Start()
     {
+		started = true;
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class Menu : MonoBehaviour
 
     IEnumerator waitThreeSeconds()
     {
+		started = false;
         yield return new WaitForSeconds(1F);
         GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
         yield return new WaitForSeconds(1F);
@@ -60,5 +62,6 @@ public class Menu : MonoBehaviour
         GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
         yield return new WaitForSeconds(1F);
         GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
+		started = true;
     }
 }
