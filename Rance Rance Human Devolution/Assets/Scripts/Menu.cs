@@ -26,9 +26,9 @@ public class Menu : MonoBehaviour
     IEnumerator waitThreeSeconds()
     {
 		started = false;
-        yield return new WaitForSeconds(0.5F);
+        yield return new WaitForSeconds(0.38F);
         GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[1];
-        yield return new WaitForSeconds(0.5F);
+        yield return new WaitForSeconds(0.38F);
         GameObject.Find("Panel").GetComponent<Image>().sprite = backgrounds[0];
 		started = true;
     }
