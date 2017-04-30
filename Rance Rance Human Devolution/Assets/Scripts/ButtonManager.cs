@@ -6,7 +6,7 @@ public class ButtonManager : MonoBehaviour
 {
     public void NewGameBtn(string newGameLevel)
     {
-        SceneManager.LoadScene(newGameLevel);
+        SceneManager.LoadSceneAsync(newGameLevel);
     }
 
     public void ExitGameBtn()
