@@ -11,3 +11,11 @@ EditorBuildSettings:
     path: Assets/Scenes (Levels)/Menu.unity
   - enabled: 1
     path: Assets/Scenes (Levels)/Second Menu.unity
+  - enabled: 1
+    path: Assets/Scenes (Levels)/Bork Till You're Dead.unity
+  - enabled: 1
+    path: Assets/Scenes (Levels)/Psychosocial.unity
+  - enabled: 1
+    path: Assets/Scenes (Levels)/Emotional Titanic Flute.unity
+  - enabled: 1
+    path: Assets/Scenes (Levels)/601 McCrees 2.unity
