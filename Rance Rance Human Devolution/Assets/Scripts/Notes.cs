@@ -52,7 +52,7 @@ public class Notes : MonoBehaviour
         {
             if (Input.GetKeyDown(kc[0]) || Input.GetKeyDown(kc[1]))
             {
-                Instantiate(n,transform.position,Quaternion.identity);
+				Instantiate(n,gameObject.transform.position,Quaternion.identity);
             }
         }
         else
