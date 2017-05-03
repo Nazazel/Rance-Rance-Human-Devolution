@@ -36,6 +36,7 @@ public class TestDown: MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
 			{
+				StopCoroutine (pressed ());
 				StartCoroutine (pressed ());
 				if (hasNote)
 				{
@@ -67,6 +68,7 @@ public class TestDown: MonoBehaviour
 		sr.color = new Color(1,1,1);
 		yield return new WaitForSeconds (0.1f);
 		sr.color = old;
+		StopCoroutine (pressed ());
 	}
 		
 	public IEnumerator destructoList()
