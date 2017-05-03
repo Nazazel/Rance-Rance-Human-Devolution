@@ -14,12 +14,13 @@ public class TestUp: MonoBehaviour
 	private readonly float FLASH_DUR = 0.4f;
 	public bool createMode;
 	public GameObject n;
+	public Color old;
 
 	// Use this for initialization
 	void Start()
 	{
-
 		sr = GetComponent<SpriteRenderer>();
+		old = sr.color;
 		print(sr.color);
 	}
 
@@ -37,7 +38,6 @@ public class TestUp: MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
 			{
-				StopCoroutine (pressed ());
 				StartCoroutine (pressed ());
 				if (hasNote)
 				{
@@ -66,11 +66,9 @@ public class TestUp: MonoBehaviour
 
 	public IEnumerator pressed()
 	{
-		Color old = sr.color;
 		sr.color = new Color(1,1,1);
 		yield return new WaitForSeconds (0.1f);
 		sr.color = old;
-		StopCoroutine (pressed ());
 	}
 
 	public IEnumerator destructoList()
@@ -78,8 +76,9 @@ public class TestUp: MonoBehaviour
 		for (int i = 0; i < notes.Capacity; i++) {
 			temp_note = notes [i];
 			Destroy (temp_note);
-			notes.Remove (temp_note);
 		}
+		notes.Clear ();
+		notes.TrimExcess ();
 		yield return new WaitForSeconds (0.1f);
 	}
 }

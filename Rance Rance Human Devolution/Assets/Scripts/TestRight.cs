@@ -14,11 +14,13 @@ public class TestRight: MonoBehaviour
 	private readonly float FLASH_DUR = 0.4f;
 	public bool createMode;
 	public GameObject n;
+	public Color old;
 
 	// Use this for initialization
 	void Start()
 	{
 		sr = GetComponent<SpriteRenderer>();
+		old = sr.color;
 		print(sr.color);
 	}
 
@@ -36,7 +38,6 @@ public class TestRight: MonoBehaviour
 		{
 			if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
 			{
-				StopCoroutine (pressed ());
 				StartCoroutine (pressed ());
 				if (hasNote)
 				{
@@ -65,11 +66,9 @@ public class TestRight: MonoBehaviour
 
 	public IEnumerator pressed()
 	{
-		Color old = sr.color;
 		sr.color = new Color(1,1,1);
 		yield return new WaitForSeconds (0.1f);
 		sr.color = old;
-		StopCoroutine (pressed ());
 	}
 
 	public IEnumerator destructoList()
