@@ -6,7 +6,7 @@ public class Notes : MonoBehaviour
 {
     private bool hasNote = false;
     private KeyCode[] kc;
-    private GameObject lastNote, temp_note;
+    private GameObject lastNote, temp_note, score;
     public GameObject n, xn;
     private List<GameObject> notes = new List<GameObject>();
     private SpriteRenderer sr;
@@ -17,6 +17,8 @@ public class Notes : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        score = GameObject.FindWithTag("Score");
+        print(score);
         old = sr.color;
         print(sr.color);
         kc = new KeyCode[2];
@@ -94,6 +96,7 @@ public class Notes : MonoBehaviour
             temp_note = notes[i];
             Destroy(temp_note);
             notes.Remove(temp_note);
+            score.SendMessage("excellent");
         }
         yield return new WaitForSeconds(0.1f);
     }
