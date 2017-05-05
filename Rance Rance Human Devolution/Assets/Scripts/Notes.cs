@@ -1,26 +1,23 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Notes : MonoBehaviour
 {
     private bool hasNote = false;
-    private GameObject lastNote, un, dn, ln, rn;
-    private SpriteRenderer sr;
-    private float timer = 10f;
-    private float o = 0.125f;
     private KeyCode[] kc;
-    private readonly float FLASH_DUR = 0.4f;
+    private GameObject lastNote, temp_note;
+    public GameObject n, xn;
+    private List<GameObject> notes = new List<GameObject>();
+    private SpriteRenderer sr;
     public bool createMode;
-    public GameObject n;
+    public Color old;
 
     // Use this for initialization
     void Start()
     {
-        un = GameObject.Find("NoteY");
-        dn = GameObject.Find("NoteA");
-        ln = GameObject.Find("NoteX");
-        rn = GameObject.Find("NoteB");
         sr = GetComponent<SpriteRenderer>();
+        old = sr.color;
         print(sr.color);
         kc = new KeyCode[2];
         switch (this.name)
@@ -42,48 +39,29 @@ public class Notes : MonoBehaviour
                 kc[1] = KeyCode.DownArrow;
                 break;
         }
-
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (createMode)
         {
             if (Input.GetKeyDown(kc[0]) || Input.GetKeyDown(kc[1]))
             {
-				Instantiate(n,gameObject.transform.position,Quaternion.identity);
+                Instantiate(n, gameObject.transform.position, Quaternion.identity);
             }
         }
         else
         {
             if (Input.GetKeyDown(kc[0]) || Input.GetKeyDown(kc[1]))
             {
+                StartCoroutine(pressed());
                 if (hasNote)
                 {
-                    Destroy(lastNote);
-                    timer = 0f;
+                    StartCoroutine(destructoList());
                 }
             }
-            if (timer < FLASH_DUR)
-            {
-                o = Mathf.Lerp(0.1f, 1f, (FLASH_DUR / 2f - Mathf.Abs((FLASH_DUR / 2f) - timer)) / FLASH_DUR);
-                if (timer < FLASH_DUR / 2f)
-                {
-                    o += 0.64f * Mathf.Sqrt(timer);
-                    if (o > 1f)
-                    {
-                        o = 1f;
-                    }
-                }
-                sr.color = new Color(o, o, o, 1f);
-                timer += Time.deltaTime;
-                if (timer >= FLASH_DUR)
-                {
-                    o = 0.1f;
-                    sr.color = new Color(o, o, o, 1f);
-                }
-            }
+
         }
     }
 
@@ -92,10 +70,32 @@ public class Notes : MonoBehaviour
     {
         hasNote = true;
         lastNote = o.gameObject;
+        notes.Add(lastNote);
     }
 
     private void OnTriggerExit2D(Collider2D o)
     {
         hasNote = false;
+        notes.Remove(o.gameObject);
+        notes.TrimExcess();
     }
+
+    public IEnumerator pressed()
+    {
+        sr.color = new Color(1, 1, 1);
+        yield return new WaitForSeconds(0.1f);
+        sr.color = old;
+    }
+
+    public IEnumerator destructoList()
+    {
+        for (int i = 0; i < notes.Capacity; i++)
+        {
+            temp_note = notes[i];
+            Destroy(temp_note);
+            notes.Remove(temp_note);
+        }
+        yield return new WaitForSeconds(0.1f);
+    }
+
 }
