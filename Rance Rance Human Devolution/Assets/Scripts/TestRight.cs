@@ -18,18 +18,12 @@ public class TestRight: MonoBehaviour
     public Color old;
     public string[] controller;
     public Sprite xbox_sprite;
+    public Sprite key_sprite;
 
     // Use this for initialization
     void Start()
     {
-
-        controller = Input.GetJoystickNames();
         sr = GetComponent<SpriteRenderer>();
-
-        if (controller[0] == "Controller (Xbox One For Windows)")
-        {
-            sr.sprite = xbox_sprite;
-        }
 
         old = sr.color;
         print(sr.color);
@@ -38,7 +32,18 @@ public class TestRight: MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-		if (createMode)
+        controller = Input.GetJoystickNames();
+        if (controller[0] == "Controller (Xbox One For Windows)")
+        {
+            sr.sprite = xbox_sprite;
+        }
+
+        else
+        {
+            sr.sprite = key_sprite;
+        }
+
+        if (createMode)
 		{
 			if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
 			{
