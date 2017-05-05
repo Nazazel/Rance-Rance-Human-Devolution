@@ -14,6 +14,7 @@ public class TestLeft: MonoBehaviour
 	private readonly float FLASH_DUR = 0.4f;
 	public bool createMode;
 	public GameObject n;
+    public GameObject xn;
 	public Color old;
     public string[] controller;
     public Sprite xbox_sprite;
@@ -36,31 +37,46 @@ public class TestLeft: MonoBehaviour
 
     // Update is called once per frame
     void Update()
-	{
-		if (createMode)
-		{
-			if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-			{
-				Instantiate(n,gameObject.transform.position,Quaternion.identity);
-			}
-		}
-		else
-		{
-			if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-			{
-				StartCoroutine (pressed ());
-				if (hasNote)
-				{
-					StartCoroutine(destructoList());
-					timer = 0f;
-				}
-			}
+    {
+        if (createMode)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            {
+                Instantiate(n, gameObject.transform.position, Quaternion.identity);
+            }
 
-		}
-	}
+            else if (Input.GetKeyDown("joystick button 2"))
+            {
+                Instantiate(xn, gameObject.transform.position, Quaternion.identity);
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            {
+                StartCoroutine(pressed());
+                if (hasNote)
+                {
+                    StartCoroutine(destructoList());
+                    timer = 0f;
+                }
+            }
+
+            else if (Input.GetKeyDown("joystick button 2"))
+            {
+                StartCoroutine(pressed());
+                if (hasNote)
+                {
+                    StartCoroutine(destructoList());
+                    timer = 0f;
+                }
+            }
+
+        }
+    }
 
 
-	private void OnTriggerEnter2D(Collider2D o)
+    private void OnTriggerEnter2D(Collider2D o)
 	{
 		hasNote = true;
 		lastNote = o.gameObject;

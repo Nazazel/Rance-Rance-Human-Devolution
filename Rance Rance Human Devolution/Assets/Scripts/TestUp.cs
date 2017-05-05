@@ -14,7 +14,8 @@ public class TestUp: MonoBehaviour
 	private readonly float FLASH_DUR = 0.4f;
 	public bool createMode;
 	public GameObject n;
-	public Color old;
+    public GameObject xn;
+    public Color old;
     public string[] controller;
     public Sprite xbox_sprite;
 
@@ -43,7 +44,13 @@ public class TestUp: MonoBehaviour
 			{
 				Instantiate(n,gameObject.transform.position,Quaternion.identity);
 			}
-		}
+
+            else if (Input.GetKeyDown("joystick button 3"))
+            {
+                Instantiate(xn, gameObject.transform.position, Quaternion.identity);
+            }
+
+        }
 		else
 		{
 			if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
@@ -56,7 +63,17 @@ public class TestUp: MonoBehaviour
 				}
 			}
 
-		}
+            else if (Input.GetKeyDown("joystick button 3"))
+            {
+                StartCoroutine(pressed());
+                if (hasNote)
+                {
+                    StartCoroutine(destructoList());
+                    timer = 0f;
+                }
+            }
+
+        }
 	}
 
 
