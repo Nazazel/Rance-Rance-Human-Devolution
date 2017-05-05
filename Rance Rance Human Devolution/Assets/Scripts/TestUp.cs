@@ -15,11 +15,21 @@ public class TestUp: MonoBehaviour
 	public bool createMode;
 	public GameObject n;
 	public Color old;
+    public string[] controller;
+    public Sprite xbox_sprite;
 
 	// Use this for initialization
 	void Start()
 	{
-		sr = GetComponent<SpriteRenderer>();
+
+        controller = Input.GetJoystickNames();
+        sr = GetComponent<SpriteRenderer>();
+
+        if (controller[0] == "Controller (Xbox One For Windows)")
+        {
+            sr.sprite = xbox_sprite;
+        }  
+
 		old = sr.color;
 		print(sr.color);
 	}
