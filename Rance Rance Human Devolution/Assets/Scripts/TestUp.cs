@@ -16,6 +16,7 @@ public class TestUp: MonoBehaviour
     public string[] controller;
     public Sprite xbox_sprite;
     public Sprite key_sprite;
+	private int note_capacity;
     private float missBound = 0.28f, okayBound = 0.2f, goodBound = 0.11f; //Values greater than a certain bound are classified as that type of hit. Ex: outside of goodBound but within okayBound is good.
 
 
@@ -93,6 +94,7 @@ public class TestUp: MonoBehaviour
         if (absDiff > missBound)
         {
             score.SendMessage("miss");
+			Debug.Log("misssss");
         }
         else if (absDiff > okayBound)
         {
@@ -119,12 +121,14 @@ public class TestUp: MonoBehaviour
 
 	public IEnumerator destructoList()
 	{
-		for (int i = 0; i < notes.Capacity; i++) {
+		note_capacity = notes.Capacity;
+		for (int i = 0; i < note_capacity; i++) {
 			temp_note = notes [i];
 			Destroy (temp_note);
+			notes.Remove (temp_note);
+			notes.TrimExcess ();
+			note_capacity = notes.Capacity;
 		}
-		notes.Clear ();
-		notes.TrimExcess ();
 		yield return new WaitForSeconds (0.1f);
 	}
 }
