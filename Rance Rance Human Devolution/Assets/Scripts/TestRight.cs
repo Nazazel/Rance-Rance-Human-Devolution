@@ -14,7 +14,7 @@ public class TestRight: MonoBehaviour
 	private readonly float FLASH_DUR = 0.4f;
 	public bool createMode;
 	public GameObject n;
-    public GameObject xn;
+//    public GameObject xn;
     public Color old;
     public string[] controller;
     public Sprite xbox_sprite;
@@ -33,7 +33,7 @@ public class TestRight: MonoBehaviour
     void Update()
 	{
         controller = Input.GetJoystickNames();
-        if (controller[0] == "Controller (Xbox One For Windows)")
+		if (controller.Length > 0 && controller[0] == "Controller (Xbox One For Windows)")
         {
             sr.sprite = xbox_sprite;
         }
@@ -45,15 +45,15 @@ public class TestRight: MonoBehaviour
 
         if (createMode)
 		{
-			if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+			if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown("joystick button 1"))
 			{
 				Instantiate(n,gameObject.transform.position,Quaternion.identity);
 			}
 
-            else if (Input.GetKeyDown("joystick button 1"))
-            {
-                Instantiate(xn, gameObject.transform.position, Quaternion.identity);
-            }
+//            else if (Input.GetKeyDown("joystick button 1"))
+//            {
+//                Instantiate(xn, gameObject.transform.position, Quaternion.identity);
+//            }
         }
 		else
 		{
