@@ -178,20 +178,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.62, y: 7.62}
-    newSize: {x: 7.62, y: 7.62}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.4}
-  m_EdgeRadius: 0
+  m_Size: {x: 2, y: 3}
 --- !u!61 &61735602600574616
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -203,20 +192,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.62, y: 7.62}
-    newSize: {x: 7.62, y: 7.62}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.4}
-  m_EdgeRadius: 0
+  m_Size: {x: 2, y: 3}
 --- !u!61 &61785856964546102
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -228,20 +206,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.62, y: 7.62}
-    newSize: {x: 7.62, y: 7.62}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.4}
-  m_EdgeRadius: 0
+  m_Size: {x: 2, y: 3}
 --- !u!61 &61850826359400090
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -253,20 +220,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.62, y: 7.62}
-    newSize: {x: 7.62, y: 7.62}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 0.4}
-  m_EdgeRadius: 0
+  m_Size: {x: 2, y: 3}
 --- !u!114 &114104247244672414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -278,9 +234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27597e19098f4ec429a1ff6bb8c74a8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createMode: 0
+  createMode: 1
   n: {fileID: 1379542071368890, guid: 39910d2a1bc12714780476ed30caea0f, type: 2}
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: 7d2ebc68d00744b4dbe41529c9c590b7, type: 3}
+  key_sprite: {fileID: 21300000, guid: 625be30b2cc8a2644b2f002e9b0ca078, type: 3}
 --- !u!114 &114499060563542340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,9 +251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1de60856007ddd4894a6c7f783769e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createMode: 0
+  createMode: 1
   n: {fileID: 1846238423490700, guid: 702950377f88d08499a310b78c0eb908, type: 2}
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: 1c07851dae6133a45953c172879cf12e, type: 3}
+  key_sprite: {fileID: 21300000, guid: e1c39e5334f97684abceda0dc780d1c9, type: 3}
 --- !u!114 &114644608927196998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,9 +268,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b59a84c03f1dff4e8bfc0f06c123d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createMode: 0
+  createMode: 1
   n: {fileID: 1942279206857364, guid: 0308eaf4ed58b4f46961b398f42070a6, type: 2}
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: e2848e0cc31f2c94b9131bc02059f1f4, type: 3}
+  key_sprite: {fileID: 21300000, guid: 58543f349acfed041916c5b4d5f4a581, type: 3}
 --- !u!114 &114920682406712528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,9 +285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733f204b998bcdf4d9145e82eb9926bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  createMode: 0
+  createMode: 1
   n: {fileID: 1703980337271548, guid: 37d7ecc1b4520304b968e7c099c06701, type: 2}
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: 3eb62ee175d0e9840afe5243b6c595e3, type: 3}
+  key_sprite: {fileID: 21300000, guid: df8f84b1035bbef40a941125050bb0e4, type: 3}
 --- !u!212 &212195898691101372
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -353,16 +321,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58543f349acfed041916c5b4d5f4a581, type: 3}
   m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 7.62, y: 7.62}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
 --- !u!212 &212545244551795330
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -393,16 +356,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e1c39e5334f97684abceda0dc780d1c9, type: 3}
   m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 7.62, y: 7.62}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
 --- !u!212 &212624403452016890
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -433,16 +391,11 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 625be30b2cc8a2644b2f002e9b0ca078, type: 3}
   m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 7.62, y: 7.62}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
 --- !u!212 &212714969452511596
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -473,13 +426,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: df8f84b1035bbef40a941125050bb0e4, type: 3}
   m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 7.62, y: 7.62}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
