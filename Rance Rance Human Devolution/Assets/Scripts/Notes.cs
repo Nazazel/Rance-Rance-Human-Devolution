@@ -12,6 +12,7 @@ public class Notes : MonoBehaviour
     private SpriteRenderer sr;
     public bool createMode;
     public Color old;
+    private float missBound = 0.28f, okayBound = 0.2f, goodBound = 0.11f; //Values greater than a certain bound are classified as that type of hit. Ex: outside of goodBound but within okayBound is good.
 
     // Use this for initialization
     void Start()
@@ -78,6 +79,23 @@ public class Notes : MonoBehaviour
     private void OnTriggerExit2D(Collider2D o)
     {
         hasNote = false;
+        float absDiff = Mathf.Abs(o.gameObject.transform.position.y - this.transform.position.y);
+        if (absDiff > missBound)
+        {
+            score.SendMessage("miss");
+        }
+        else if(absDiff > okayBound)
+        {
+            score.SendMessage("okay");
+        }
+        else if (absDiff > goodBound)
+        {
+            score.SendMessage("good");
+        }
+        else
+        {
+            score.SendMessage("excellent");
+        }
         notes.Remove(o.gameObject);
         notes.TrimExcess();
     }
@@ -96,7 +114,6 @@ public class Notes : MonoBehaviour
             temp_note = notes[i];
             Destroy(temp_note);
             notes.Remove(temp_note);
-            score.SendMessage("excellent");
         }
         yield return new WaitForSeconds(0.1f);
     }

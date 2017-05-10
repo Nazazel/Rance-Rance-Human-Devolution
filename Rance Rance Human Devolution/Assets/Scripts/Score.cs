@@ -23,4 +23,23 @@ public class Score : MonoBehaviour {
     {
         score += 1000;
     }
+
+    void good()
+    {
+        score += 500;
+    }
+
+    void okay()
+    {
+        score += 250;
+    }
+
+    void miss()
+    {
+        score -= 101;
+        if (score < 0)
+        {
+            score = 0;
+        }
+    }
 }
