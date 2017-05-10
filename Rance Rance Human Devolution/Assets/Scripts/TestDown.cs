@@ -5,20 +5,19 @@ using System.Collections.Generic;
 public class TestDown: MonoBehaviour
 {
 	private bool hasNote = false;
-	private GameObject lastNote, un, dn, ln, rn;
+	private GameObject lastNote;
 	private GameObject temp_note;
 	private List<GameObject> notes = new List<GameObject>();
 	private SpriteRenderer sr;
-	private float timer = 10f;
-	private float o = 0.125f;
-	private readonly float FLASH_DUR = 0.4f;
 	public bool createMode;
-	public GameObject n;
+	public GameObject n, score;
 //    public GameObject xn;
     public Color old;
     public string[] controller;
     public Sprite xbox_sprite;
     public Sprite key_sprite;
+    private float missBound = 0.28f, okayBound = 0.2f, goodBound = 0.11f; //Values greater than a certain bound are classified as that type of hit. Ex: outside of goodBound but within okayBound is good.
+
 
     // Use this for initialization
     void Start()
@@ -63,7 +62,6 @@ public class TestDown: MonoBehaviour
 				if (hasNote)
 				{
 					StartCoroutine(destructoList());
-					timer = 0f;
 				}
 			}
 
@@ -73,7 +71,6 @@ public class TestDown: MonoBehaviour
                 if (hasNote)
                 {
                     StartCoroutine(destructoList());
-                    timer = 0f;
                 }
             }
         }
@@ -90,7 +87,24 @@ public class TestDown: MonoBehaviour
 	private void OnTriggerExit2D(Collider2D o)
 	{
 		hasNote = false;
-		notes.Remove (o.gameObject);
+        float absDiff = Mathf.Abs(o.gameObject.transform.position.y - this.transform.position.y);
+        if (absDiff > missBound)
+        {
+            score.SendMessage("miss");
+        }
+        else if (absDiff > okayBound)
+        {
+            score.SendMessage("okay");
+        }
+        else if (absDiff > goodBound)
+        {
+            score.SendMessage("good");
+        }
+        else
+        {
+            score.SendMessage("excellent");
+        }
+        notes.Remove (o.gameObject);
 		notes.TrimExcess ();
 	}
 

@@ -7,7 +7,7 @@ public class Notes : MonoBehaviour
     private bool hasNote = false;
     private KeyCode[] kc;
     private GameObject lastNote, temp_note, score;
-    public GameObject n, xn;
+    public GameObject n;
     private List<GameObject> notes = new List<GameObject>();
     private SpriteRenderer sr;
     public bool createMode;

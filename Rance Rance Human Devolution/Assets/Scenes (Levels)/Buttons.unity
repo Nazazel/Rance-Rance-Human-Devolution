@@ -140,6 +140,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &9471024
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -270,6 +273,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &29443877
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,6 +406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &58706849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -530,6 +539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &59433317
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -660,6 +672,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &97411532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -790,6 +805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &108678027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -920,6 +938,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &126120694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1050,6 +1071,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &147006965
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1180,6 +1204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &199031879
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1310,6 +1337,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &253455711
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1440,6 +1470,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &267627549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1570,6 +1603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &382476556
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1700,6 +1736,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &392104061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1830,6 +1869,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &397289566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2080,6 +2122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &452657893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2210,6 +2255,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &470610140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2340,6 +2388,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &474039997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2470,6 +2521,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &481670516
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2600,6 +2654,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &485744145
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2730,6 +2787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &497165116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2860,6 +2920,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &568584348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2990,6 +3053,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &571979261
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3120,6 +3186,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &573574683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3250,6 +3319,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &580222203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3380,6 +3452,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &611085970
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3510,6 +3585,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &662731134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3640,6 +3718,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &727959836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3770,6 +3851,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &728528886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3900,6 +3984,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &746885908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4030,6 +4117,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &781102116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4160,6 +4250,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &801215765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4290,6 +4383,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &816143947
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4420,6 +4516,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &818920113
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4550,6 +4649,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &820401819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4680,6 +4782,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &841212216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4810,6 +4915,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &854553294
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4940,6 +5048,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &869526147
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5070,6 +5181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &877708642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5200,6 +5314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &926769335
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5330,6 +5447,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &934093001
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5460,6 +5580,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &947291159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5590,6 +5713,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &949589861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5720,6 +5846,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &971125867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5939,6 +6068,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1099815067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6069,6 +6201,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1119755481
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6199,6 +6334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1132155445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6329,6 +6467,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1151208714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6459,6 +6600,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1176769050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6589,6 +6733,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1189823783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6719,6 +6866,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1197514721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6849,6 +6999,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1201075138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6979,6 +7132,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1204262251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7109,6 +7265,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1240699519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7239,6 +7398,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1296485905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7369,6 +7531,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1313309244
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7499,6 +7664,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1324985107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7629,6 +7797,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1338466912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7759,6 +7930,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1358116727
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7889,6 +8063,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1401693577
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8019,6 +8196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1497921267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8149,6 +8329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1499454643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8279,6 +8462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1499857967
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8409,6 +8595,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1578345702
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8539,6 +8728,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1610156520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8669,6 +8861,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1637574535
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8806,26 +9001,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 61400515587796310, guid: 248b4fb0a0583b44598cb3e770b613ab,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61986038985669036, guid: 248b4fb0a0583b44598cb3e770b613ab,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61516335055122496, guid: 248b4fb0a0583b44598cb3e770b613ab,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 61639649948689244, guid: 248b4fb0a0583b44598cb3e770b613ab,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 248b4fb0a0583b44598cb3e770b613ab, type: 2}
   m_IsPrefabParent: 0
@@ -8861,6 +9036,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1660326290
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8991,6 +9169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1677783622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9121,6 +9302,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1733989578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9251,6 +9435,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1737453083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9381,6 +9568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1759155455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9511,6 +9701,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1849808137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9641,6 +9834,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1870309649
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9771,6 +9967,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1872457211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9901,6 +10100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1887109620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10031,6 +10233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1887802566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10161,6 +10366,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1899138347
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10291,6 +10499,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1905839265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10421,6 +10632,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1919026735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10551,6 +10765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1947325922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10681,6 +10898,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1960246281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10811,6 +11031,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1973508984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10941,6 +11164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &1979453710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11071,6 +11297,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2025578458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11201,6 +11430,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2046805866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11331,6 +11563,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2063938424
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11461,6 +11696,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2075801064
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11591,6 +11829,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2109708590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11721,6 +11962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2127884736
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11851,6 +12095,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2138004126
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11981,6 +12228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SPEED: 2.5
   mobile: 1
+  controller: []
+  xbox_sprite: {fileID: 0}
+  key_sprite: {fileID: 0}
 --- !u!61 &2143062403
 BoxCollider2D:
   m_ObjectHideFlags: 0
