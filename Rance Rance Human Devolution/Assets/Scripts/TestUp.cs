@@ -63,7 +63,6 @@ public class TestUp: MonoBehaviour
 				if (hasNote)
 				{
 					StartCoroutine(destructoList());
-					timer = 0f;
 				}
 			}
 
@@ -73,7 +72,6 @@ public class TestUp: MonoBehaviour
                 if (hasNote)
                 {
                     StartCoroutine(destructoList());
-                    timer = 0f;
                 }
             }
 
