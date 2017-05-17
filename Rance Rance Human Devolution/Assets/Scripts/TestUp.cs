@@ -24,7 +24,7 @@ public class TestUp: MonoBehaviour
     void Start()
 	{
         sr = GetComponent<SpriteRenderer>();
-
+		score = GameObject.FindWithTag("Score");
 		old = sr.color;
 		print(sr.color);
 	}
@@ -99,6 +99,7 @@ public class TestUp: MonoBehaviour
         else if (absDiff > okayBound)
         {
             score.SendMessage("okay");
+
         }
         else if (absDiff > goodBound)
         {
