@@ -7,11 +7,12 @@ public class Notes : MonoBehaviour
     private bool hasNote = false;
     private KeyCode[] kc;
     private GameObject lastNote, temp_note, score;
-    public GameObject n;
+    public GameObject n, health;
     private List<GameObject> notes = new List<GameObject>();
     private SpriteRenderer sr;
     public bool createMode;
     public Color old;
+    private int note_capacity;
     private float missBound = 0.28f, okayBound = 0.2f, goodBound = 0.11f; //Values greater than a certain bound are classified as that type of hit. Ex: outside of goodBound but within okayBound is good.
 
     // Use this for initialization
@@ -79,23 +80,7 @@ public class Notes : MonoBehaviour
     private void OnTriggerExit2D(Collider2D o)
     {
         hasNote = false;
-        float absDiff = Mathf.Abs(o.gameObject.transform.position.y - this.transform.position.y);
-        if (absDiff > missBound)
-        {
-            score.SendMessage("miss");
-        }
-        else if(absDiff > okayBound)
-        {
-            score.SendMessage("okay");
-        }
-        else if (absDiff > goodBound)
-        {
-            score.SendMessage("good");
-        }
-        else
-        {
-            score.SendMessage("excellent");
-        }
+        health.SendMessage("esfd");
         notes.Remove(o.gameObject);
         notes.TrimExcess();
     }
@@ -109,11 +94,31 @@ public class Notes : MonoBehaviour
 
     public IEnumerator destructoList()
     {
-        for (int i = 0; i < notes.Capacity; i++)
+        note_capacity = notes.Capacity;
+        for (int i = 0; i < note_capacity; i++)
         {
             temp_note = notes[i];
+            float absDiff = Mathf.Abs(temp_note.transform.position.y - this.transform.position.y);
+            if (absDiff > missBound)
+            {
+                score.SendMessage("miss");
+            }
+            else if (absDiff > okayBound)
+            {
+                score.SendMessage("okay");
+            }
+            else if (absDiff > goodBound)
+            {
+                score.SendMessage("good");
+            }
+            else
+            {
+                score.SendMessage("excellent");
+            }
             Destroy(temp_note);
             notes.Remove(temp_note);
+            notes.TrimExcess();
+            note_capacity = notes.Capacity;
         }
         yield return new WaitForSeconds(0.1f);
     }

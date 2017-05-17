@@ -10,7 +10,7 @@ public class TestUp: MonoBehaviour
 	private List<GameObject> notes = new List<GameObject>();
 	private SpriteRenderer sr;
 	public bool createMode;
-	public GameObject n, score;
+	public GameObject n, score, health;
 //    public GameObject xn;
     public Color old;
     public string[] controller;
@@ -90,24 +90,6 @@ public class TestUp: MonoBehaviour
 	private void OnTriggerExit2D(Collider2D o)
 	{
 		hasNote = false;
-        float absDiff = Mathf.Abs(o.gameObject.transform.position.y - this.transform.position.y);
-        if (absDiff > missBound)
-        {
-            score.SendMessage("miss");
-			Debug.Log("misssss");
-        }
-        else if (absDiff > okayBound)
-        {
-            score.SendMessage("okay");
-        }
-        else if (absDiff > goodBound)
-        {
-            score.SendMessage("good");
-        }
-        else
-        {
-            score.SendMessage("excellent");
-        }
         notes.Remove (o.gameObject);
 		notes.TrimExcess ();
 	}
@@ -124,7 +106,24 @@ public class TestUp: MonoBehaviour
 		note_capacity = notes.Capacity;
 		for (int i = 0; i < note_capacity; i++) {
 			temp_note = notes [i];
-			Destroy (temp_note);
+            float absDiff = Mathf.Abs(temp_note.transform.position.y - this.transform.position.y);
+            if (absDiff > missBound)
+            {
+                score.SendMessage("miss");
+            }
+            else if (absDiff > okayBound)
+            {
+                score.SendMessage("okay");
+            }
+            else if (absDiff > goodBound)
+            {
+                score.SendMessage("good");
+            }
+            else
+            {
+                score.SendMessage("excellent");
+            }
+            Destroy (temp_note);
 			notes.Remove (temp_note);
 			notes.TrimExcess ();
 			note_capacity = notes.Capacity;

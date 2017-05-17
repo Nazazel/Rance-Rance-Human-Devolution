@@ -89,23 +89,6 @@ public class TestRight: MonoBehaviour
 	private void OnTriggerExit2D(Collider2D o)
 	{
 		hasNote = false;
-        float absDiff = Mathf.Abs(o.gameObject.transform.position.y - this.transform.position.y);
-        if (absDiff > missBound)
-        {
-            score.SendMessage("miss");
-        }
-        else if (absDiff > okayBound)
-        {
-            score.SendMessage("okay");
-        }
-        else if (absDiff > goodBound)
-        {
-            score.SendMessage("good");
-        }
-        else
-        {
-            score.SendMessage("excellent");
-        }
         notes.Remove (o.gameObject);
 		notes.TrimExcess ();
 	}
@@ -122,7 +105,24 @@ public class TestRight: MonoBehaviour
 		note_capacity = notes.Capacity;
 		for (int i = 0; i < note_capacity; i++) {
 			temp_note = notes [i];
-			Destroy (temp_note);
+            float absDiff = Mathf.Abs(temp_note.transform.position.y - this.transform.position.y);
+            if (absDiff > missBound)
+            {
+                score.SendMessage("miss");
+            }
+            else if (absDiff > okayBound)
+            {
+                score.SendMessage("okay");
+            }
+            else if (absDiff > goodBound)
+            {
+                score.SendMessage("good");
+            }
+            else
+            {
+                score.SendMessage("excellent");
+            }
+            Destroy (temp_note);
 			notes.Remove (temp_note);
 			notes.TrimExcess ();
 			note_capacity = notes.Capacity;
