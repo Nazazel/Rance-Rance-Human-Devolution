@@ -24,7 +24,7 @@ public class TestLeft: MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-
+		score = GameObject.FindWithTag("Score");
         old = sr.color;
         print(sr.color);
     }

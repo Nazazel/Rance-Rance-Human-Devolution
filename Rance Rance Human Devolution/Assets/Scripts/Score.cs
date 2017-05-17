@@ -19,25 +19,25 @@ public class Score : MonoBehaviour {
         t.text = "Score: " + score.ToString("D6");
 	}
 
-    void excellent()
+    public void excellent()
     {
 		Debug.Log("e");
         score += 1000;
     }
 
-    void good()
+    public void good()
     {
 		Debug.Log("g");
         score += 500;
     }
 
-    void okay()
+    public void okay()
     {
 		Debug.Log("o");
         score += 250;
     }
 
-    void miss()
+    public void miss()
     {
 		Debug.Log("miss");
         score -= 101;
