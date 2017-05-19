@@ -26,7 +26,6 @@ public class Health : MonoBehaviour {
     public void esfd() //Stands for Ergonomically Scintillating Floccinaucinihilipilification Disruptor
     {
         currPlayerHealth -= 10f;
-        print(currPlayerHealth);
     }
 
     public void addHealth(int hpGain)

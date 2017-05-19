@@ -21,25 +21,21 @@ public class Score : MonoBehaviour {
 
     public void excellent()
     {
-		Debug.Log("e");
         score += 1000;
     }
 
     public void good()
     {
-		Debug.Log("g");
         score += 500;
     }
 
     public void okay()
     {
-		Debug.Log("o");
         score += 250;
     }
 
     public void miss()
     {
-		Debug.Log("miss");
         score -= 101;
         if (score < 0)
         {
