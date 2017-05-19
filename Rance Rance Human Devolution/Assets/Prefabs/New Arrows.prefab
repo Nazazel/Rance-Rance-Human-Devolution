@@ -190,7 +190,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 2, y: 3.1}
   m_EdgeRadius: 0
 --- !u!61 &61516335055122496
 BoxCollider2D:
@@ -215,7 +215,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 2, y: 3.1}
   m_EdgeRadius: 0
 --- !u!61 &61639649948689244
 BoxCollider2D:
@@ -240,7 +240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 2, y: 3.1}
   m_EdgeRadius: 0
 --- !u!61 &61986038985669036
 BoxCollider2D:
@@ -265,7 +265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 3}
+  m_Size: {x: 2, y: 3.1}
   m_EdgeRadius: 0
 --- !u!114 &114054981824102498
 MonoBehaviour:
@@ -279,9 +279,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   n: {fileID: 1846238423490700, guid: 702950377f88d08499a310b78c0eb908, type: 2}
-  xn: {fileID: 0}
+  health: {fileID: 0}
   createMode: 0
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: 1c07851dae6133a45953c172879cf12e, type: 3}
+  key_sprite: {fileID: 21300000, guid: e1c39e5334f97684abceda0dc780d1c9, type: 3}
 --- !u!114 &114174004820210644
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,9 +297,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   n: {fileID: 1379542071368890, guid: 39910d2a1bc12714780476ed30caea0f, type: 2}
-  xn: {fileID: 0}
+  health: {fileID: 0}
   createMode: 0
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: 7d2ebc68d00744b4dbe41529c9c590b7, type: 3}
+  key_sprite: {fileID: 21300000, guid: 625be30b2cc8a2644b2f002e9b0ca078, type: 3}
 --- !u!114 &114558969232599478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,9 +315,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   n: {fileID: 1942279206857364, guid: 0308eaf4ed58b4f46961b398f42070a6, type: 2}
-  xn: {fileID: 0}
+  health: {fileID: 0}
   createMode: 0
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: e2848e0cc31f2c94b9131bc02059f1f4, type: 3}
+  key_sprite: {fileID: 21300000, guid: 58543f349acfed041916c5b4d5f4a581, type: 3}
 --- !u!114 &114777507529677246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -324,9 +333,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   n: {fileID: 1703980337271548, guid: 37d7ecc1b4520304b968e7c099c06701, type: 2}
-  xn: {fileID: 0}
+  health: {fileID: 0}
   createMode: 0
   old: {r: 0, g: 0, b: 0, a: 0}
+  controller: []
+  xbox_sprite: {fileID: 21300000, guid: 3eb62ee175d0e9840afe5243b6c595e3, type: 3}
+  key_sprite: {fileID: 21300000, guid: df8f84b1035bbef40a941125050bb0e4, type: 3}
 --- !u!212 &212211408579318294
 SpriteRenderer:
   m_ObjectHideFlags: 1
