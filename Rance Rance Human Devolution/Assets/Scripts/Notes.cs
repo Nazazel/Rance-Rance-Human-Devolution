@@ -80,8 +80,8 @@ public class Notes : MonoBehaviour
     private void OnTriggerExit2D(Collider2D o)
     {
         hasNote = false;
-        //score.SendMessage("miss");
-        //health.SendMessage("esfd");
+        score.SendMessage("miss");
+        health.SendMessage("esfd");
         notes.Remove(o.gameObject);
         notes.TrimExcess();
         note_capacity--;

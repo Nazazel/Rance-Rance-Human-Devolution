@@ -1535,37 +1535,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1632712584880994, guid: 289ee93c2c956104b9e0f75bc2b02236, type: 2}
-      propertyPath: m_TagString
-      value: Score
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091140827022872, guid: 289ee93c2c956104b9e0f75bc2b02236, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -606.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091140827022872, guid: 289ee93c2c956104b9e0f75bc2b02236, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -859.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 289ee93c2c956104b9e0f75bc2b02236, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &409261521 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1632712584880994, guid: 289ee93c2c956104b9e0f75bc2b02236,
-    type: 2}
-  m_PrefabInternal: {fileID: 409261520}
---- !u!114 &409261522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 409261521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5360ac21adcc064f9b8710bb91f039b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &432520071
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,7 @@ public class Health : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         frac_scale = Mathf.Lerp(80f, 0f, (maxPlayerHealth - currPlayerHealth) / maxPlayerHealth);
-        frac_pos = Mathf.Lerp(-859.5f, -853.9f, (maxPlayerHealth - currPlayerHealth) / maxPlayerHealth);
+        frac_pos = Mathf.Lerp(-858.5f, -852.9f, (maxPlayerHealth - currPlayerHealth) / maxPlayerHealth);
         sr.transform.localScale = new Vector3(frac_scale, 10f, 0);
         sr.transform.localPosition = new Vector3(frac_pos, -606.08f, 0);
     }
@@ -26,6 +26,7 @@ public class Health : MonoBehaviour {
     public void esfd() //Stands for Ergonomically Scintillating Floccinaucinihilipilification Disruptor
     {
         currPlayerHealth -= 10f;
+        print(currPlayerHealth);
     }
 
     public void addHealth(int hpGain)
