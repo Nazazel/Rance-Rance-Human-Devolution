@@ -20,9 +20,8 @@ public class Notes : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         score = GameObject.FindWithTag("Score");
-        print(score);
         old = sr.color;
-        print(sr.color);
+        note_capacity = 0;
         kc = new KeyCode[2];
         switch (this.name)
         {
@@ -75,14 +74,17 @@ public class Notes : MonoBehaviour
         hasNote = true;
         lastNote = o.gameObject;
         notes.Add(lastNote);
+        note_capacity++;
     }
 
     private void OnTriggerExit2D(Collider2D o)
     {
         hasNote = false;
-        health.SendMessage("esfd");
+        //score.SendMessage("miss");
+        //health.SendMessage("esfd");
         notes.Remove(o.gameObject);
         notes.TrimExcess();
+        note_capacity--;
     }
 
     public IEnumerator pressed()
@@ -94,7 +96,7 @@ public class Notes : MonoBehaviour
 
     public IEnumerator destructoList()
     {
-        note_capacity = notes.Capacity;
+        print(note_capacity);
         for (int i = 0; i < note_capacity; i++)
         {
             temp_note = notes[i];
@@ -102,6 +104,7 @@ public class Notes : MonoBehaviour
             if (absDiff > missBound)
             {
                 score.SendMessage("miss");
+                health.SendMessage("esfd");
             }
             else if (absDiff > okayBound)
             {
@@ -118,8 +121,8 @@ public class Notes : MonoBehaviour
             Destroy(temp_note);
             notes.Remove(temp_note);
             notes.TrimExcess();
-            note_capacity = notes.Capacity;
         }
+        note_capacity = 0;
         yield return new WaitForSeconds(0.1f);
     }
 

@@ -26,7 +26,7 @@ public class TestLeft: MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
 		score = GameObject.FindWithTag("Score");
         old = sr.color;
-        print(sr.color);
+        note_capacity = 0;
     }
 
     // Update is called once per frame
@@ -84,6 +84,7 @@ public class TestLeft: MonoBehaviour
 		hasNote = true;
 		lastNote = o.gameObject;
 		notes.Add (lastNote);
+        note_capacity++;
 	}
 
 	private void OnTriggerExit2D(Collider2D o)
@@ -91,6 +92,7 @@ public class TestLeft: MonoBehaviour
 		hasNote = false;
         notes.Remove (o.gameObject);
 		notes.TrimExcess ();
+        note_capacity--;
 	}
 
 	public IEnumerator pressed()
@@ -102,7 +104,7 @@ public class TestLeft: MonoBehaviour
 
 	public IEnumerator destructoList()
 	{
-		note_capacity = notes.Capacity;
+        print(note_capacity);
 		for (int i = 0; i < note_capacity; i++) {
 			temp_note = notes [i];
             float absDiff = Mathf.Abs(temp_note.transform.position.y - this.transform.position.y);
@@ -125,8 +127,8 @@ public class TestLeft: MonoBehaviour
             Destroy (temp_note);
 			notes.Remove (temp_note);
 			notes.TrimExcess ();
-			note_capacity = notes.Capacity;
 		}
+        note_capacity = 0;
 		yield return new WaitForSeconds (0.1f);
 	}
 
