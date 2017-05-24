@@ -14,26 +14,34 @@ public class Health2 : MonoBehaviour
 	void Start()
 	{
 		bar.fillAmount = 1;
-		playerHealth = 10;
+		playerHealth = 100;
 	}
 
-	public void esfd() {
+	public void esfd() { //Stands for Ergonomically Scintillating Floccinaucinihilipilification Disruptor
 		if (playerHealth > 0) {
-			playerHealth--;
+            playerHealth -= 9;
 		}
 	}
 
-	public void addHealth(int hpGain)
+    public void esfdlite()
+    { ////
+        if (playerHealth > 0)
+        {
+            playerHealth -= 5;
+        }
+    }
+
+    public void addHealth(int hpGain)
 	{
 		playerHealth += hpGain;
-		if (playerHealth > 10) playerHealth = 10;
+		if (playerHealth > 100) playerHealth = 100;
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (playerHealth <= 10) {
-			bar.fillAmount = playerHealth * 0.1f;
+		if (playerHealth <= 100) {
+			bar.fillAmount = playerHealth * 0.01f;
 		}
 		if (playerHealth == 0 && !started) 
 		{

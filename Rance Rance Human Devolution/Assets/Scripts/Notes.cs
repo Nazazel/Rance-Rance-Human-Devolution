@@ -19,6 +19,8 @@ public class Notes : MonoBehaviour
 
     private int note_capacity;
     private float missBound = 0.29f, okayBound = 0.2f, goodBound = 0.11f; //Values greater than a certain bound are classified as that type of hit. Ex: outside of goodBound but within okayBound is good.
+    private bool noPenalty = false;
+    private float freeTimer = 0f;
 
     // Use this for initialization
     void Start()
@@ -26,6 +28,7 @@ public class Notes : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         score = GameObject.FindWithTag("Score");
         health = GameObject.Find("Health");
+        print(health);
         old = sr.color;
         note_capacity = 0;
         kc = new KeyCode[3];
@@ -67,6 +70,15 @@ public class Notes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (noPenalty)
+        {
+            freeTimer -= Time.deltaTime;
+            if(freeTimer <= 0f)
+            {
+                freeTimer = 0f;
+                noPenalty = false;
+            }
+        }
         if (createMode)
         {
             if (Input.GetKeyDown(kc[0]) || Input.GetKeyDown(kc[1]) || Input.GetKeyDown(kc[2]))
@@ -85,7 +97,7 @@ public class Notes : MonoBehaviour
                 }
 				else if (note_capacity == 0) {
 					score.SendMessage ("miss");
-					health.SendMessage ("esfd");
+					health.SendMessage ("esfdlite");
 				}
             }
 
@@ -103,12 +115,16 @@ public class Notes : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D o)
     {
-        hasNote = false;
-        score.SendMessage("miss");
-        health.SendMessage("esfd");
-        notes.Remove(o.gameObject);
-        notes.TrimExcess();
-        note_capacity--;
+        if (!noPenalty)
+        {
+            hasNote = false;
+            score.SendMessage("miss");
+            health.SendMessage("esfd");
+            notes.Remove(o.gameObject);
+            notes.TrimExcess();
+            note_capacity--;
+        }
+        if (note_capacity < 0) note_capacity = 0;
     }
 
     public IEnumerator pressed()
@@ -120,27 +136,21 @@ public class Notes : MonoBehaviour
 
     public IEnumerator destructoList()
     {
-        print(note_capacity);
-		if (note_capacity == 0) {
-			score.SendMessage ("miss");
-			health.SendMessage ("esfd");
-			yield return new WaitForSeconds (0.1f);
-		} else {
-			for (int i = 0; i < note_capacity; i++) {
+        noPenalty = true;
+        freeTimer = 0.05f;
+            int n2 = note_capacity;
+			for (int i = 0; i < n2; i++) {
 				temp_note = notes [i];
 				float absDiff = Mathf.Abs (temp_note.transform.position.y - this.transform.position.y);
-				if (absDiff > missBound) {
-					score.SendMessage ("miss");
-					health.SendMessage ("esfd");
-				} else if (absDiff > okayBound) {
+				if (absDiff > okayBound) {
 					score.SendMessage ("okay");
-					health.GetComponent<Health2> ().addHealth (1);
+					health.GetComponent<Health2> ().addHealth (2);
 				} else if (absDiff > goodBound) {
 					score.SendMessage ("good");
-					health.GetComponent<Health2> ().addHealth (1);
+					health.GetComponent<Health2> ().addHealth (2);
 				} else {
 					score.SendMessage ("excellent");
-					health.GetComponent<Health2> ().addHealth (1);
+					health.GetComponent<Health2> ().addHealth (2);
 				}
 				Destroy (temp_note);
 				notes.Remove (temp_note);
@@ -148,7 +158,6 @@ public class Notes : MonoBehaviour
 			}
 			note_capacity = 0;
 			yield return new WaitForSeconds (0.1f);
-		}
     }
 
 }

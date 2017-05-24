@@ -25,7 +25,12 @@ public class Health : MonoBehaviour {
 
     public void esfd() //Stands for Ergonomically Scintillating Floccinaucinihilipilification Disruptor
     {
-        currPlayerHealth -= 10f;
+        currPlayerHealth -= 9f;
+    }
+
+    public void esfdlite()
+    {
+        currPlayerHealth -= 5f;
     }
 
     public void addHealth(int hpGain)
