@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Notes : MonoBehaviour
 {
+	private bool dead;
     private bool hasNote = false;
     private KeyCode[] kc;
     private GameObject lastNote, temp_note, score, health;
@@ -25,6 +26,7 @@ public class Notes : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		dead = false;
         sr = GetComponent<SpriteRenderer>();
         score = GameObject.FindWithTag("Score");
         health = GameObject.Find("Health");
@@ -70,38 +72,31 @@ public class Notes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (noPenalty)
-        {
-            freeTimer -= Time.deltaTime;
-            if(freeTimer <= 0f)
-            {
-                freeTimer = 0f;
-                noPenalty = false;
-            }
-        }
-        if (createMode)
-        {
-            if (Input.GetKeyDown(kc[0]) || Input.GetKeyDown(kc[1]) || Input.GetKeyDown(kc[2]))
-            {
-                Instantiate(n, gameObject.transform.position, Quaternion.identity);
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(kc[0]) || Input.GetKeyDown(kc[1]) || Input.GetKeyDown(kc[2]))
-            {
-                StartCoroutine(pressed());
-                if (hasNote)
-                {
-                    StartCoroutine(destructoList());
-                }
-				else {
-					score.SendMessage ("miss");
-					health.SendMessage ("esfdlite");
+		if (!dead) {
+			if (noPenalty) {
+				freeTimer -= Time.deltaTime;
+				if (freeTimer <= 0f) {
+					freeTimer = 0f;
+					noPenalty = false;
 				}
-            }
+			}
+			if (createMode) {
+				if (Input.GetKeyDown (kc [0]) || Input.GetKeyDown (kc [1]) || Input.GetKeyDown (kc [2])) {
+					Instantiate (n, gameObject.transform.position, Quaternion.identity);
+				}
+			} else {
+				if (Input.GetKeyDown (kc [0]) || Input.GetKeyDown (kc [1]) || Input.GetKeyDown (kc [2])) {
+					StartCoroutine (pressed ());
+					if (hasNote) {
+						StartCoroutine (destructoList ());
+					} else {
+						score.SendMessage ("miss");
+						health.SendMessage ("esfdlite");
+					}
+				}
 
-        }
+			}
+		}
     }
 
 
@@ -160,5 +155,10 @@ public class Notes : MonoBehaviour
 			}
 			yield return new WaitForSeconds (0.01f);
     }
+
+	public void death()
+	{
+		dead = true;
+	}
 
 }
