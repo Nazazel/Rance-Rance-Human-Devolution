@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Health2 : MonoBehaviour
 {
-	private GameObject allets;
+	private GameObject failure;
+	private GameObject twinAllets;
 	private GameObject left;
 	private GameObject right;
 	private GameObject up;
@@ -18,8 +19,9 @@ public class Health2 : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		//allets = GameObject.Find("AlletsGameOver");
-		//allets.SetActive (false);
+		failure = GameObject.Find ("Failed");
+		failure.SetActive(false);
+		twinAllets = GameObject.Find ("Allets");
 		left = GameObject.Find ("Left");
 		right = GameObject.Find ("Right");
 		up = GameObject.Find ("Up");
@@ -54,7 +56,7 @@ public class Health2 : MonoBehaviour
 		if (playerHealth <= 100) {
 			bar.fillAmount = playerHealth * 0.01f;
 		}
-		if (playerHealth < 0 && !started) 
+		if (playerHealth <= 0 && !started) 
 		{
 			started = true;
 			left.SendMessage ("death");
@@ -62,14 +64,18 @@ public class Health2 : MonoBehaviour
 			up.SendMessage ("death");
 			down.SendMessage ("death");
 			StopAllCoroutines ();
+			GameObject.Find ("VideoPlane").SendMessage ("vidStop");
 			StartCoroutine ("endLevel");
 		}
 	}
 
 	public IEnumerator endLevel()
 	{
-		//allets.SetActive (true);
-		yield return new WaitForSeconds (4.0f);
+		twinAllets.SetActive (false);
+		Destroy (GameObject.Find ("Notes"));
+		GameObject.Find ("VideoPlane").SetActive (false);
+		failure.SetActive(true);
+		yield return new WaitForSeconds (2.0f);
 		SceneManager.LoadSceneAsync ("Game Over");
 	}
 }

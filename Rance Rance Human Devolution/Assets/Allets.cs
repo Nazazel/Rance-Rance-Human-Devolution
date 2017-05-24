@@ -14,18 +14,40 @@ public class Allets : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!started) {
-			started = true;
-			StartCoroutine("AlletsGreat");
-		}
+		
 	}
 
 	public IEnumerator AlletsGreat()
 	{
-		yield return new WaitForSeconds (4.0f);
-		allets.Play ("Great");
-		yield return new WaitForSeconds (1.0f);
-		allets.Play ("Idle");
-		started = false;
+		if (!started) {
+			started = true;
+			allets.Play ("Great");
+			yield return new WaitForSeconds (1.5f);
+			allets.Play ("Idle");
+			started = false;
+		}
 	}
+
+	public IEnumerator AlletsOK()
+	{
+		if (!started) {
+			started = true;
+			allets.Play ("OK");
+			yield return new WaitForSeconds (1.5f);
+			allets.Play ("Idle");
+			started = false;
+		}
+	}
+
+	public IEnumerator AlletsMiss()
+	{
+		if (!started) {
+			started = true;
+			allets.Play ("Miss");
+			yield return new WaitForSeconds (1.5f);
+			allets.Play ("Idle");
+			started = false;
+		}
+	}
+		
 }

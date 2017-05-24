@@ -8,6 +8,8 @@ public class Notes : MonoBehaviour
     private bool hasNote = false;
     private KeyCode[] kc;
     private GameObject lastNote, temp_note, score, health;
+	private GameObject allets1;
+	private GameObject allets2;
     public GameObject n;
     private List<GameObject> notes = new List<GameObject>();
     private SpriteRenderer sr;
@@ -26,6 +28,8 @@ public class Notes : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+		allets1 = GameObject.Find ("allets_basic_0");
+		allets2 = GameObject.Find ("allets_basic_0 (1)");
 		dead = false;
         sr = GetComponent<SpriteRenderer>();
         score = GameObject.FindWithTag("Score");
@@ -72,6 +76,16 @@ public class Notes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		controller = Input.GetJoystickNames(); //Moved this code to start() to reduce lag
+		if (controller.Length > 0 && controller[0] == "Controller (Xbox One For Windows)")
+		{
+			sr.sprite = xbox_sprite;
+		}
+
+		else
+		{
+			sr.sprite = key_sprite;
+		}
 		if (!dead) {
 			if (noPenalty) {
 				freeTimer -= Time.deltaTime;
@@ -92,6 +106,8 @@ public class Notes : MonoBehaviour
 					} else {
 						score.SendMessage ("miss");
 						health.SendMessage ("esfdlite");
+						allets1.SendMessage ("AlletsMiss");
+						allets2.SendMessage ("AlletsMiss");
 					}
 				}
 
@@ -115,6 +131,8 @@ public class Notes : MonoBehaviour
             hasNote = false;
             score.SendMessage("miss");
             health.SendMessage("esfd");
+			allets1.SendMessage ("AlletsMiss");
+			allets2.SendMessage ("AlletsMiss");
             notes.Remove(o.gameObject);
             notes.TrimExcess();
             note_capacity--;
@@ -145,9 +163,13 @@ public class Notes : MonoBehaviour
 				} else if (absDiff > goodBound) {
 					score.SendMessage ("good");
 					health.GetComponent<Health2> ().addHealth (3);
+					allets1.SendMessage ("AlletsOK");
+					allets2.SendMessage ("AlletsOK");
 				} else {
 					score.SendMessage ("excellent");
 					health.GetComponent<Health2> ().addHealth (3);
+					allets1.SendMessage ("AlletsGreat");
+					allets2.SendMessage ("AlletsGreat");
 				}
                 notes.Remove(temp_note);
                 Destroy (temp_note);
