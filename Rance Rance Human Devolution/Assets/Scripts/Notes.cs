@@ -83,6 +83,10 @@ public class Notes : MonoBehaviour
                 {
                     StartCoroutine(destructoList());
                 }
+				else if (note_capacity == 0) {
+					score.SendMessage ("miss");
+					health.SendMessage ("esfd");
+				}
             }
 
         }
@@ -117,33 +121,34 @@ public class Notes : MonoBehaviour
     public IEnumerator destructoList()
     {
         print(note_capacity);
-        for (int i = 0; i < note_capacity; i++)
-        {
-            temp_note = notes[i];
-            float absDiff = Mathf.Abs(temp_note.transform.position.y - this.transform.position.y);
-            if (absDiff > missBound)
-            {
-                score.SendMessage("miss");
-                health.SendMessage("esfd");
-            }
-            else if (absDiff > okayBound)
-            {
-                score.SendMessage("okay");
-            }
-            else if (absDiff > goodBound)
-            {
-                score.SendMessage("good");
-            }
-            else
-            {
-                score.SendMessage("excellent");
-            }
-            Destroy(temp_note);
-            notes.Remove(temp_note);
-            notes.TrimExcess();
-        }
-        note_capacity = 0;
-        yield return new WaitForSeconds(0.1f);
+		if (note_capacity == 0) {
+			score.SendMessage ("miss");
+			health.SendMessage ("esfd");
+			yield return new WaitForSeconds (0.1f);
+		} else {
+			for (int i = 0; i < note_capacity; i++) {
+				temp_note = notes [i];
+				float absDiff = Mathf.Abs (temp_note.transform.position.y - this.transform.position.y);
+				if (absDiff > missBound) {
+					score.SendMessage ("miss");
+					health.SendMessage ("esfd");
+				} else if (absDiff > okayBound) {
+					score.SendMessage ("okay");
+					health.GetComponent<Health2> ().addHealth (1);
+				} else if (absDiff > goodBound) {
+					score.SendMessage ("good");
+					health.GetComponent<Health2> ().addHealth (1);
+				} else {
+					score.SendMessage ("excellent");
+					health.GetComponent<Health2> ().addHealth (1);
+				}
+				Destroy (temp_note);
+				notes.Remove (temp_note);
+				notes.TrimExcess ();
+			}
+			note_capacity = 0;
+			yield return new WaitForSeconds (0.1f);
+		}
     }
 
 }
