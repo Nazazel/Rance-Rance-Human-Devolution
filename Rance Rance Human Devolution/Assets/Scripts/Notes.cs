@@ -95,7 +95,7 @@ public class Notes : MonoBehaviour
                 {
                     StartCoroutine(destructoList());
                 }
-				else if (note_capacity == 0) {
+				else {
 					score.SendMessage ("miss");
 					health.SendMessage ("esfdlite");
 				}
@@ -139,25 +139,26 @@ public class Notes : MonoBehaviour
         noPenalty = true;
         freeTimer = 0.05f;
             int n2 = note_capacity;
+            note_capacity = 0;
+            hasNote = false;
 			for (int i = 0; i < n2; i++) {
-				temp_note = notes [i];
+				temp_note = notes [0];
 				float absDiff = Mathf.Abs (temp_note.transform.position.y - this.transform.position.y);
 				if (absDiff > okayBound) {
 					score.SendMessage ("okay");
-					health.GetComponent<Health2> ().addHealth (2);
+					health.GetComponent<Health2> ().addHealth (3);
 				} else if (absDiff > goodBound) {
 					score.SendMessage ("good");
-					health.GetComponent<Health2> ().addHealth (2);
+					health.GetComponent<Health2> ().addHealth (3);
 				} else {
 					score.SendMessage ("excellent");
-					health.GetComponent<Health2> ().addHealth (2);
+					health.GetComponent<Health2> ().addHealth (3);
 				}
-				Destroy (temp_note);
-				notes.Remove (temp_note);
+                notes.Remove(temp_note);
+                Destroy (temp_note);
 				notes.TrimExcess ();
 			}
-			note_capacity = 0;
-			yield return new WaitForSeconds (0.1f);
+			yield return new WaitForSeconds (0.01f);
     }
 
 }
